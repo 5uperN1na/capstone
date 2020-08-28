@@ -23,7 +23,7 @@ const deleteMeditation = (id: number) => Query ('DELETE FROM med_videos WHERE id
 
 //edit one
 
-const edit = (id: number, med_categoryid: number, title: string, author: string, video_url: string) => Query('UPDATE med_videls SET med_categoryid = ?, title = ?, author = ?, video_url = ? WHERE id = ?', [med_categoryid, title, author, video_url, id]);
+const edit = (id: number, med_categoryid: number, title: string, author: string, video_url: string) => Query('UPDATE med_videos SET med_categoryid = ?, title = ?, author = ?, video_url = ? WHERE id = ?', [med_categoryid, title, author, video_url, id]);
 
 
 

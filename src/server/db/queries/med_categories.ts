@@ -1,4 +1,5 @@
 import { Query } from '../index';
+import { NONAME } from 'dns';
 
 //get all
 
@@ -10,15 +11,20 @@ const one = (id: number) => Query ('SELECT * from med_categories WHERE id = ?', 
 
 //insert one
 
-const insert = (categoryid: number, title: string, author: string, price: number) => {
-    return Query ('INSERT into books (categoryid, title, author, price) VALUES (?, ?, ?, ?)', [categoryid, title, author, price]);
+const insert =(id: number, name:string) => {
+    return Query ('INSERT med_categories (id, name) VALUES (?, ?)', [id, name]);
     } 
-     
 
+
+//edit
+
+const edit = (id: number, name: string) => Query ('UPDATE * from med_categories SET name = ? WHERE id = ?', [id, name]);
+     
 
 export default {
     all,
     one,
-    insert
+    insert,
+    edit
 
 }
