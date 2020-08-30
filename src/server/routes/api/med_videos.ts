@@ -30,12 +30,12 @@ router.get('/:id?', async (req, res) => {
 
 //post route
 
-router.post('/', passport.authenticate('jwt'), async (req, res) => {
+router.post('/', async (req, res) => {
 
     const newVideo = req.body;
     try {
 
-        await db.med_videos.insert (newVideo.med_categoryid, newVideo.med_title, newVideo.med_author, newVideo.med_video_url);
+        await db.med_videos.insert (newVideo.med_categoryid, newVideo.title, newVideo.author, newVideo.video_url);
         res.json({msg:  'Meditation video was posted successfully.'});
     
 
@@ -50,7 +50,7 @@ router.post('/', passport.authenticate('jwt'), async (req, res) => {
 
 //delete route
 
-router.delete('/:id?', passport.authenticate('jwt'), async (req, res) => {
+router.delete('/:id?', async (req, res) => {
     const id = Number(req.params.id);
     try {
             await db.med_videos.deleteMeditation(id);
@@ -67,7 +67,7 @@ router.delete('/:id?', passport.authenticate('jwt'), async (req, res) => {
 
 //edit route 
 
-router.put('/:id?', passport.authenticate('jwt'), async (req, res) => {
+router.put('/:id', async (req, res) => {
     const id = Number(req.params.id);
     const editVideo = req.body;
 

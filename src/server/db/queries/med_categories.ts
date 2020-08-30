@@ -18,8 +18,8 @@ const insert =(id: number, name:string) => {
 
 //edit
 
-const edit = (id: number, name: string) => Query ('UPDATE * from med_categories SET name = ? WHERE id = ?', [id, name]);
-     
+const edit = (id: number, name: string ) => Query ('UPDATE med_categories SET name = ? WHERE id = ?', [name, id]);
+
 
 export default {
     all,

@@ -33,13 +33,13 @@ router.get('/:id?', async (req, res) => {
 
 router.post('/', async (req, res ) => {
 
-    const id = Number (req.params.id);
+   
     const newCategory = req.body;
     
 
     try {
 
-        await db.med_categories.insert(id, newCategory.name);
+        await db.med_categories.insert(newCategory.id, newCategory.name);
         res.json({msg:  'Meditation category was posted successfully.'});
 
         
@@ -53,22 +53,23 @@ router.post('/', async (req, res ) => {
 //edit 
 
 router.put('/:id', async (req, res) => {
-
-    const id = Number (req.params.id);
+    const id = Number(req.params.id);
     const editCategory = req.body;
 
     try {
+        await db.med_categories.edit(id, editCategory.name);
+        res.json({msg:  'Meditation category was updated successfully.'});
+    
 
-        await db.med_categories.edit(editCategory.id, editCategory.name);
-        res.json({msg:  'Meditation category was edited successfully.'});
-        
     } catch (error) {
-        console.log(error);
-        res.status(500).json({msg: "Meditation categories Put route failed.", error});
-        
-    }
+    console.log(error);
+    res.status(500).json({ msg: 'Edit category route failed.', error })
+
+}
 
 });
+
+
 
 
 export default router;
