@@ -34,15 +34,14 @@ import apiService from '../utils/api-service';
     
         return (
             <main className="container">
-    
-                 
+       
                 <section className="row justify-content-center mt-5">
-                    <div className="col-10">
+                
                     {med_videos.map(med_video => (
                         <HomeDisplay key={`display-card-${med_video.id}`} med_video={med_video} />
     
                     ))}
-                    </div>
+                 
                 </section>
     
             </main>
