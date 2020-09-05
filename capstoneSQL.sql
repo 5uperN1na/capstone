@@ -66,4 +66,8 @@ SELECT med_videos.*, med_categories.name from med_videos JOIN med_categories on 
 
 INSERT into med_videos (med_categoryid, title, author, video_url) VALUES (1, "Calm Sleep Down Meditation", "Jason Stephenson", "https://www.youtube.com/watch?v=88mXwNnPgXM");
 
-UPDATE med_videos SET med_categoryid = 3 WHERE id = 2;
+UPDATE med_videos SET video_url = "DvR8rTffCP4" where id = 3;
+
+ 
+
+ 

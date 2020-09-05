@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { IMedVideo } from '../utils/interfaces';
 import HomeDisplay from '../components/HomeDisplay';
 import apiService from '../utils/api-service';
+import Navbar from '../components/Navbar';
 
  
     const Home: React.FC<HomeProps> = (props) => {
@@ -34,6 +35,7 @@ import apiService from '../utils/api-service';
     
         return (
             <main className="container">
+                 <Navbar />
        
                 <section className="row justify-content-center mt-5">
                 
