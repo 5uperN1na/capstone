@@ -37,14 +37,15 @@ import Navbar from '../components/Navbar';
             <main className="container">
                  <Navbar />
        
-                <section className="row justify-content-center mt-5">
+                <div>
+                
                 
                     {med_videos.map(med_video => (
                         <HomeDisplay key={`display-card-${med_video.id}`} med_video={med_video} />
     
                     ))}
                  
-                </section>
+                </div>
     
             </main>
         );

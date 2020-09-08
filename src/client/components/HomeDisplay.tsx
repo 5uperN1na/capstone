@@ -15,16 +15,13 @@ const HomeDisplay: React.FC<HomeDisplayProps> = ({ med_video }) => {
 
     return (
 
-        <main className="container bg-primary">
+        <div className="col-md-3 mb-sm-3">
+        <main className="container bg-cyan">
 
-        <div className="col-md-5 mb-sm-5">
-       
+
          
-            {/* <div className="col-md-12 mb-sm-7"> */}
-            <section className="row justify-content-center">
-                {/* <section className="row justify-content-center col-md-3"> */}
-
-                <div className="card" style={{ width: ' 18rem' }}>
+                <div className="card mt-5" style={{ width: ' 18rem' }}>
+                    {/* <div className="card mt-5" style={{ width: ' 18rem' }}> */}
 
 
                     <div className="embed-responsive embed-responsive-16by9" >
@@ -38,22 +35,23 @@ const HomeDisplay: React.FC<HomeDisplayProps> = ({ med_video }) => {
                                 height: "100%"
                             }}
                             src={`https://www.youtube.com/embed/${med_video.video_url}`}
-                            frameBorder="2"
+                            frameBorder="3"
                         />
                     </div>
 
                     <div className="card-header bg-info">    {med_video.title}</div>
-                    <div className="card-body">{med_video.author}</div>
+                    <div className="card-body bg-success">{med_video.author}</div>
 
                 </div >
+          
 
-            </section>
 
 
-        </div >
-       
+
+
 
         </main>
+        </div >
     );
 
 
