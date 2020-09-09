@@ -4,6 +4,7 @@ import med_categories from './queries/med_categories';
 import users from './queries/users';
 import med_videos from './queries/med_videos';
 import affirm_videos from './queries/affirm_videos';
+import affirm_categories from './queries/affirm_categories';
 
 //sql connection
 
@@ -29,5 +30,6 @@ export default {
     med_videos,
     med_categories,
     users,
-    affirm_videos
+    affirm_videos,
+    affirm_categories
 }

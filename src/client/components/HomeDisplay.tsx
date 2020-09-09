@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import moment from 'moment';
 import { Link, useHistory } from 'react-router-dom';
 import { IMedVideo } from '../utils/interfaces';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import Navbar from '../components/Navbar'
 
 

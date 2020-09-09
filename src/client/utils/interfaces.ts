@@ -20,3 +20,14 @@ export interface IMedCategory {
     name?: string;
     _created?: Date;
 }
+
+export interface IAffirmVideo {
+    id?: number;
+    categoryid?: number;
+    title?: string;
+    author?: string;
+    video_url?: string;
+    _created: Date;
+    name?: string;
+
+}

@@ -33,16 +33,16 @@ router.get('/:id?', async (req, res) => {
 
 router.post('/', async (req, res) => {
 
-    const newVideo = req.body;
+    const newAffirmVideo = req.body;
     try {
 
-        await db.med_videos.insert (newVideo.med_categoryid, newVideo.title, newVideo.author, newVideo.video_url);
-        res.json({msg:  'Meditation video was posted successfully.'});
+        await db.affirm_videos.insert (newAffirmVideo.affirm_categoryid, newAffirmVideo.title, newAffirmVideo.author, newAffirmVideo.video_url);
+        res.json({msg:  'Affirmation video was posted successfully.'});
     
 
     } catch (error) {
         console.log(error);
-        res.status(500).json({ msg: 'Post meditation video route failed.', error })
+        res.status(500).json({ msg: 'Post affirmation video route failed.', error })
 
     }
 
@@ -54,12 +54,12 @@ router.post('/', async (req, res) => {
 router.delete('/:id?', async (req, res) => {
     const id = Number(req.params.id);
     try {
-            await db.med_videos.deleteMeditation(id);
+            await db.affirm_videos.deleteAffirmation(id);
             res.json({msg:  'Meditation video was deleted successfully.'});
      
     } catch (error) {
         console.log(error);
-        res.status(500).json({ msg: 'Delete meditation video route failed.', error })
+        res.status(500).json({ msg: 'Delete affirmation video route failed.', error })
 
     }
 
@@ -70,16 +70,16 @@ router.delete('/:id?', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     const id = Number(req.params.id);
-    const editVideo = req.body;
+    const editAffirmVideo = req.body;
 
     try {
-        await db.med_videos.edit(id, editVideo.med_categoryid, editVideo.title, editVideo.author, editVideo.video_url);
+        await db.med_videos.edit(id, editAffirmVideo.med_categoryid, editAffirmVideo.title, editAffirmVideo.author, editAffirmVideo.video_url);
         res.json({msg:  'Meditation video was updated successfully.'});
     
 
     } catch (error) {
     console.log(error);
-    res.status(500).json({ msg: 'Edit meditation video route failed.', error })
+    res.status(500).json({ msg: 'Edit affirmation video route failed.', error })
 
 }
 
