@@ -11,6 +11,7 @@ export interface IMedVideo {
     author?: string;
     video_url?: string;
     _created: Date;
+    name?: string;
 
 }
 

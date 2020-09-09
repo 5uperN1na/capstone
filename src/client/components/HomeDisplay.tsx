@@ -15,42 +15,35 @@ const HomeDisplay: React.FC<HomeDisplayProps> = ({ med_video }) => {
 
     return (
 
-        <div className="col-md-3 mb-sm-3">
-        <main className="container bg-cyan">
+      
+        <div className="col-md-4 mb-sm-2">
+
+            <div className="card mt-5">
+
+                <div className="embed-responsive embed-responsive-16by9" >
+
+                    <iframe className="embed-responsive-item"
+                        style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%"
+                        }}
+                        src={`https://www.youtube.com/embed/${med_video.video_url}`}
+                        frameBorder="3"
+                    />
+                </div>
+
+                <div className="card-header bg-info text-white">    {med_video.title}</div>
+                <div className="card-body bg-success text-white">{med_video.author}  <span className="float-right badge badge-pill badge-warning">{med_video.name}</span>
+                </div>
+              
+                
 
 
-         
-                <div className="card mt-5" style={{ width: ' 18rem' }}>
-                    {/* <div className="card mt-5" style={{ width: ' 18rem' }}> */}
+            </div >
 
-
-                    <div className="embed-responsive embed-responsive-16by9" >
-
-                        <iframe className="embed-responsive-item"
-                            style={{
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                width: "100%",
-                                height: "100%"
-                            }}
-                            src={`https://www.youtube.com/embed/${med_video.video_url}`}
-                            frameBorder="3"
-                        />
-                    </div>
-
-                    <div className="card-header bg-info">    {med_video.title}</div>
-                    <div className="card-body bg-success">{med_video.author}</div>
-
-                </div >
-          
-
-
-
-
-
-
-        </main>
         </div >
     );
 

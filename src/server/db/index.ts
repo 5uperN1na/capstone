@@ -3,6 +3,7 @@ import config from '../config';
 import med_categories from './queries/med_categories';
 import users from './queries/users';
 import med_videos from './queries/med_videos';
+import affirm_videos from './queries/affirm_videos';
 
 //sql connection
 
@@ -27,5 +28,6 @@ export const Query = <T = any>(query: string, values?: any) => {
 export default {
     med_videos,
     med_categories,
-    users
+    users,
+    affirm_videos
 }

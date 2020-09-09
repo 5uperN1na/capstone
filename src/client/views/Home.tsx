@@ -37,7 +37,7 @@ import Navbar from '../components/Navbar';
             <main className="container">
                  <Navbar />
        
-                <div>
+                <div className="row">
                 
                 
                     {med_videos.map(med_video => (

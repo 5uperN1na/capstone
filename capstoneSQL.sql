@@ -68,6 +68,26 @@ INSERT into med_videos (med_categoryid, title, author, video_url) VALUES (1, "Ca
 
 UPDATE med_videos SET video_url = "DvR8rTffCP4" where id = 3;
 
- 
+CREATE TABLE `affirm_categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+select * from affirm_categories;
+
+
+create table affirm_videos (
+id int(11) auto_increment,
+affirm_categoryid int(11) not null,
+`title` varchar(100) NOT NULL,
+`author` varchar(100) NOT NULL,
+`video_url` VARCHAR (255),
+created_at timestamp default current_timestamp,
+primary key(id),
+foreign key (affirm_categoryid) references affirm_categories(id)
+);
+
+ select * from affirm_videos;
 
  
