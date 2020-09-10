@@ -18,24 +18,18 @@ import Navbar from '../components/Navbar';
             setMedVideos(med_videos);
             // setCategories(categories);
         };
+
     
         useEffect(() => {
             getData();
         }, []);
-    
-        // const getBooks = async () => {
-        //     const books = await apiService('/api/books');
-        //     setBooks(books);
-        // };
-    
-        // useEffect(() => {
-        //     getBooks();
-        // }, []);
-    
+
     
         return (
             <main className="container">
                  <Navbar />
+
+                 <h1>work?</h1>
        
                 <div className="row">
                 

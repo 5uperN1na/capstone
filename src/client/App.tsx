@@ -10,12 +10,12 @@ const App: React.FC<AppProps> = (props) => {
 		<BrowserRouter>
 			<Switch>
 				<Route exact path='/'>
-					<Home />
-				</Route>
-
-				<Route exact path='/affirmation'>
 					<Affirmation />
 				</Route>
+
+				{/* <Route exact path='/affirmation'>
+					<Affirmation />
+				</Route> */}
 
 
 

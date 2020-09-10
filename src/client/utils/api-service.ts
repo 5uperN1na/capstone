@@ -9,6 +9,7 @@ export default async <T = any>(uri: string, method: string = 'GET', body?: {}) =
         headers['Authorization'] = `Bearer ${token}`;
     }
 
+    
     try {
         
         const res = await fetch(uri, {
