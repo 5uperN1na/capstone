@@ -66,7 +66,7 @@ SELECT med_videos.*, med_categories.name from med_videos JOIN med_categories on 
 
 INSERT into med_videos (med_categoryid, title, author, video_url) VALUES (1, "Calm Sleep Down Meditation", "Jason Stephenson", "https://www.youtube.com/watch?v=88mXwNnPgXM");
 
-UPDATE med_videos SET video_url = "DvR8rTffCP4" where id = 3;
+UPDATE affirm_videos SET video_url = "8mSJ4uKRBf0" where id = 3;
 
 CREATE TABLE `affirm_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -88,6 +88,6 @@ primary key(id),
 foreign key (affirm_categoryid) references affirm_categories(id)
 );
 
- select * from affirm_videos;
+ select * from affirm_videos where id = 3;
 
  

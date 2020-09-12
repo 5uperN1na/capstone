@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './views/Home';
 import Affirmation from './views/Affirmation';
+import Login from './views/Login';
 
 const App: React.FC<AppProps> = (props) => {
 	return (
@@ -10,12 +11,17 @@ const App: React.FC<AppProps> = (props) => {
 		<BrowserRouter>
 			<Switch>
 				<Route exact path='/'>
+					<Home />
+				</Route>
+
+				<Route exact path='/affirmation'>
 					<Affirmation />
 				</Route>
 
-				{/* <Route exact path='/affirmation'>
-					<Affirmation />
-				</Route> */}
+				<Route exact path='/login'>
+					<Login />
+				</Route>
+
 
 
 
