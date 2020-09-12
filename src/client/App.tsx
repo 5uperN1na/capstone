@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './views/Home';
 import Affirmation from './views/Affirmation';
+import Meditation from './views/Meditation';
 import Login from './views/Login';
 
 const App: React.FC<AppProps> = (props) => {
@@ -20,6 +21,10 @@ const App: React.FC<AppProps> = (props) => {
 
 				<Route exact path='/login'>
 					<Login />
+				</Route>
+
+				<Route exact path='/meditation'>
+					<Meditation />
 				</Route>
 
 

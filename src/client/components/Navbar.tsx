@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                     <li className="nav-item">
                         <a className="nav-link" href="/affirmation">Affirmations</a>
                     </li>
-
+{/* 
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dropdown
@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                             <div className="dropdown-divider"></div>
                             <a className="dropdown-item" href="#">Something else here</a>
                         </div>
-                    </li>
+                    </li> */}
 
 
 
