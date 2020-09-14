@@ -1,3 +1,5 @@
+#Capstone projects to bring together all things learned in Covalence:  ReactJS, ExpressJS, MySql, and NodeJS.
+
 # Barebones React/TypeScript/Express/Sass Boilerplate
 This project is a starting point for a TypeScript based React app that also has a local API server using express.
 
