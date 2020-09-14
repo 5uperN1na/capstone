@@ -12,14 +12,13 @@ const LoginDisplay: React.FC<LoginDisplayProps> = (login) => {
 
     }
 
-
     return (
         <main className="container">
             <ColdNavbar />
             <section className="row justify-content-center mt-3">
 
 
-                <form className="form-group p-3 border-primary rounded-lg bg-lightgray">
+                <form className="form-group p-3 border-primary rounded-lg-success">
 
                     <div className="shadow p-4 mb-4 bg-white">
                         <h3 className="text-center"> Login </h3>
