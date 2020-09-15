@@ -5,6 +5,7 @@ import Home from './views/Home';
 import Affirmation from './views/Affirmation';
 import Meditation from './views/Meditation';
 import Login from './views/Login';
+import Register from './views/Register';
 
 const App: React.FC<AppProps> = (props) => {
 	return (
@@ -23,13 +24,14 @@ const App: React.FC<AppProps> = (props) => {
 					<Login />
 				</Route>
 
-				<Route exact path='/meditation'>
-					<Meditation />
+				<Route exact path='/register'>
+					<Login />
 				</Route>
 
 
-
-
+				<Route exact path='/meditation'>
+					<Meditation />
+				</Route>
 
 
 			</Switch>

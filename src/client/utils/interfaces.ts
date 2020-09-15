@@ -36,8 +36,6 @@ export interface ILogin {
     id?: number;
     email?: string;
     password?: string;
-    first?: string;
-    last?: string;
     _created: Date;
 
 }

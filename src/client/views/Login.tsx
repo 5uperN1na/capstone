@@ -25,22 +25,17 @@ const Login: React.FC<LoginProps> = (props) => {
         history.push('/');
     }
 
-
     return (
         <main className="container">
-            <ColdNavbar />
-
-
+        
             <div className="row">
                 
                     <LoginDisplay key={`display-card-${login}`} login={login} />
         
             </div>
-
         </main>
     );
 }
-
 
 interface LoginProps { }
 
