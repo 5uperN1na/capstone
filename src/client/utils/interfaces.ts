@@ -39,3 +39,14 @@ export interface ILogin {
     _created: Date;
 
 }
+
+
+export interface IRegister {
+    id?: number;
+    email?: string;
+    password?: string;
+    first?: string;
+    last?: string;
+    _created: Date;
+
+}

@@ -6,36 +6,23 @@ import apiService from '../utils/api-service';
 import { ILogin } from '../utils/interfaces';
 
 
-const LoginDisplay: React.FC<LoginDisplayProps> = ({login}) => {
+const LoginDisplay: React.FC<LoginDisplayProps> = (props) => {
 
     return (
         <main className="container">
-            <ColdNavbar />
-            <section className="row justify-content-center mt-3">
-
-
-                <form className="form-group p-3 border-primary rounded-lg-success"it>
-
-                    <div className="shadow p-4 mb-4 bg-white">
-                        <h3 className="text-center"> Login </h3>
-
-                        <label>Email</label>
-                        <input value={login.email} onChange={e => setEmail(e.target.value)} className="form-control my-1" />
-                        <label>Password</label>
-                        <input value={login.password} onChange={e => setPassword(e.target.value)} className="form-control my-1" />
-
-                        <button onClick={login} className="btn btn-primary btn-block w-30 mx-auto mt-3">Submit</button>
-
-                    </div>
-                </form>
-            </section>
+        
+            <div className="row">
+                
+                    <LoginDisplay />
+        
+            </div>
         </main>
     );
 }
 
 
-interface LoginProps {
-    login: ILogin;
+interface LoginDisplayProps {
+    
 
  }
 

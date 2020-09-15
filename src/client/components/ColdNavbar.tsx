@@ -23,7 +23,7 @@ const ColdNavbar: React.FC<ColdNavbarProps> = () => {
                         <li className="nav-item active"><a href="/" className="nav-link">Home <span className="sr-only">(current)</span></a></li>
                         <li className="nav-item"><a href="/login" className="nav-link">Login</a></li>
                         <ul className="nav navbar-nav navbar-right">
-                            <button className="btn btn-success float-right" type="button">GET STARTED</button>
+                            <button className="btn btn-success float-right" type="button"><a href="/register">GET STARTED</a></button>
                         </ul>
                     </ul>
                 </div>

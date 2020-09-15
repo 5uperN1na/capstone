@@ -25,7 +25,7 @@ const App: React.FC<AppProps> = (props) => {
 				</Route>
 
 				<Route exact path='/register'>
-					<Login />
+					<Register />
 				</Route>
 
 
