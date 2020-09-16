@@ -4,6 +4,8 @@ import { useLocation, useHistory } from 'react-router-dom';
 import ColdNavbar from '../components/ColdNavbar';
 import Navbar from '../components/Navbar';
 import apiService from '../utils/api-service';
+import swal from 'sweetalert';
+
 
 
 const Register: React.FC<RegisterProps> = (props) => {
@@ -31,29 +33,30 @@ const Register: React.FC<RegisterProps> = (props) => {
         <main>
             <ColdNavbar />
 
+         
 
-
-            <section className="row justify-content-center mt-3">
+            <section className="row justify-content-center my-5">
 
                 <form className="form-group p-3 border-primary rounded-lg-success">
 
-                    <div className="shadow p-4 mb-4 bg-white">
+                    <div className="shadow p-4 mb-4 bg-dark">
                         <h3 className="text-center"> Register </h3>
 
 
-                        <label>First Name</label>
-                        <input value={first} onChange={e => setFirst(e.target.value)} className="form-control my-1" />
+
+                        <input value={first} onChange={e => setFirst(e.target.value)} className="form-control my-2"  />
 
                         <label>Last Name</label>
-                        <input value={last} onChange={e => setLast(e.target.value)} className="form-control my-1" />
+                        <input value={last} onChange={e => setLast(e.target.value)} className="form-control my-2" />
 
                         <label>Email</label>
-                        <input value={email} onChange={e => setEmail(e.target.value)} className="form-control my-1" />
+                        <input value={email} onChange={e => setEmail(e.target.value)} className="form-control my-1"  />
 
                         <label>Password</label>
-                        <input value={password} onChange={e => setPassword(e.target.value)} className="form-control my-1" />
+                        <input value={password} onChange={e => setPassword(e.target.value)} className="form-control my-1"  />
 
                         <button onClick={register} className="btn">Submit</button>
+                
                         <button onClick={() => history.push('/')} className="btn">Go Back</button>
 
 
@@ -62,13 +65,14 @@ const Register: React.FC<RegisterProps> = (props) => {
             </section>
 
 
-
-
-
-
         </main >
 
+ 
+
     );
+
+  
+
 
 
 

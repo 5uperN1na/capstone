@@ -76,6 +76,9 @@ CREATE TABLE `affirm_categories` (
 
 select * from affirm_categories;
 
+insert into affirm_categories (id, name) values
+
+(4, "Happiness");
 
 create table affirm_videos (
 id int(11) auto_increment,
