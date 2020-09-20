@@ -93,4 +93,30 @@ foreign key (affirm_categoryid) references affirm_categories(id)
 
  select * from affirm_videos where id = 3;
 
- 
+ CREATE TABLE `blog_categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+create table blogs (
+id int(11) auto_increment,
+blog_categoryid int(11) not null,
+`title` varchar(100) NOT NULL,
+`author` varchar(100) NOT NULL,
+`content` TEXT,
+created_at timestamp default current_timestamp,
+primary key(id),
+foreign key (blog_categoryid) references blog_categories(id)
+);
+
+select * from blogs;
+
+select * from blog_categories;
+
+insert into blog_categories (id, name) values
+
+(2, "Getting started");
+
+INSERT into blogs (blog_categoryid, title, author, content) VALUES (2, "Baby Steps", "Paula Suarez", "There is not a right or a wrong way to meditate.  Meditation can be done anytime and anywhere.");
+

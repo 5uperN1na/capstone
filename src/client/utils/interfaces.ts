@@ -50,3 +50,13 @@ export interface IRegister {
     _created: Date;
 
 }
+
+
+export interface IBlog {
+    id?: number;
+    title?: string;
+    author?: string;
+    content?: string;
+    _created: Date;
+
+}

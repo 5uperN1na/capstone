@@ -1,33 +1,48 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { IMedVideo } from '../utils/interfaces';
+import { IBlog } from '../utils/interfaces';
 import apiService from '../utils/api-service';
-import ColdNavbar from '../components/ColdNavbar';
+import Navbar from '../components/Navbar';
+import BlogsDisplay from '../components/BlogsDisplay';
 
+    const Blogs: React.FC<BlogsProps> = (props) => {
 
-const Home: React.FC<HomeProps> = (props) => {
+        const [blogs, setBlogs] = useState<IBlog[]>([]);
 
+    
+        const getData = async () => {
+    
+            const blogs = await apiService('/api/blogs');
+            setBlogs(blogs);
+      
+        };
 
+    
+        useEffect(() => {
+            getData();
+        }, []);
 
-    return (
-        <main className="container">
-            <ColdNavbar />
+    
+        return (
+            <main className="container">
+                 <Navbar />
 
-            <div className="container">
-                <div className="jumbotron">
-                    <h1>Bootstrap Tutorial</h1>
-                    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-    responsive, mobile-first projects on the web.</p>
+                 <h1>work?</h1>
+       
+                <div className="row">
+                
+                
+                    {blogs.map(blog => (
+                        <BlogsDisplay key={`display-card-${blog.id}`} blog={blog} />
+    
+                    ))}
+                 
                 </div>
-                <p>This is some text.</p>
-                <p>This is another text.</p>
-            </div>
-
-
-        </main>
-    );
-}
-
-interface HomeProps { }
-
-export default Home;
+    
+            </main>
+        );
+    }
+    
+    interface BlogsProps { }
+    
+    export default Blogs;

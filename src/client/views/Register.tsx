@@ -4,8 +4,7 @@ import { useLocation, useHistory } from 'react-router-dom';
 import ColdNavbar from '../components/ColdNavbar';
 import Navbar from '../components/Navbar';
 import apiService from '../utils/api-service';
-import swal from 'sweetalert';
-
+ 
 
 
 const Register: React.FC<RegisterProps> = (props) => {
