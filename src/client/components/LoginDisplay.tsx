@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import ColdNavbar from '../components/ColdNavbar';
 import apiService from '../utils/api-service';
 import { ILogin } from '../utils/interfaces';
 

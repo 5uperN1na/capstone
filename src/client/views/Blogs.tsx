@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { IBlog } from '../utils/interfaces';
 import apiService from '../utils/api-service';
-import Navbar from '../components/Navbar';
+import HotStateNavbar from '../components/HotStateNavbar';
 import BlogsDisplay from '../components/BlogsDisplay';
 
     const Blogs: React.FC<BlogsProps> = (props) => {
@@ -25,9 +25,7 @@ import BlogsDisplay from '../components/BlogsDisplay';
     
         return (
             <main className="container">
-                 <Navbar />
-
-                 <h1>work?</h1>
+                 <HotStateNavbar />
        
                 <div className="row">
                 

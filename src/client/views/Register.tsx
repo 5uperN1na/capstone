@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import ColdNavbar from '../components/ColdNavbar';
-import Navbar from '../components/Navbar';
+import ColdStateNavbar from '../components/ColdStateNavbar';
 import apiService from '../utils/api-service';
  
 
@@ -30,7 +29,7 @@ const Register: React.FC<RegisterProps> = (props) => {
 
     return (
         <main>
-            <ColdNavbar />
+            <ColdStateNavbar />
 
          
 
@@ -38,7 +37,7 @@ const Register: React.FC<RegisterProps> = (props) => {
 
                 <form className="form-group p-3 border-primary rounded-lg-success">
 
-                    <div className="shadow p-4 mb-4 bg-dark">
+                    <div className="shadow p-4 mb-4 bg-white">
                         <h3 className="text-center"> Register </h3>
 
 

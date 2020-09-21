@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useLocation, useHistory, Link } from 'react-router-dom';
 import LoginDisplay from '../components/LoginDisplay';
-import ColdNavbar from '../components/ColdNavbar';
+import ColdStateNavbar from '../components/ColdStateNavbar';
 import apiService from '../utils/api-service';
 
 
@@ -29,7 +29,7 @@ const Login: React.FC<LoginProps> = (props) => {
     return (
         <main>
 
-            <ColdNavbar />
+            <ColdStateNavbar />
 
             <section className="row justify-content-center mt-3">
 

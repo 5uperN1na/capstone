@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { IAffirmVideo } from '../utils/interfaces';
 import AffirmationDisplay from '../components/AffirmationDisplay';
 import apiService from '../utils/api-service';
-import Navbar from '../components/Navbar';
+import HotStateNavbar from '../components/HotStateNavbar';
 
  
     const Affirmation: React.FC<AffirmationProps> = (props) => {
@@ -26,7 +26,7 @@ import Navbar from '../components/Navbar';
     
         return (
             <main className="container">
-                 <Navbar />
+                 <HotStateNavbar />
        
                 <div className="row">
                 

@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import moment from 'moment';
 import { Link, useHistory } from 'react-router-dom';
 import { IMedVideo } from '../utils/interfaces';
-import Navbar from '../components/Navbar'
 
 
 const MeditationDisplay: React.FC<MeditationDisplayProps> = ({ med_video }) => {

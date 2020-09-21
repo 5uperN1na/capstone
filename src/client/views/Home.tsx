@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { IMedVideo } from '../utils/interfaces';
 import apiService from '../utils/api-service';
-import ColdNavbar from '../components/ColdNavbar';
+import ColdStateNavbar from '../components/ColdStateNavbar';
 
  
     const Home: React.FC<HomeProps> = (props) => {
@@ -11,9 +11,9 @@ import ColdNavbar from '../components/ColdNavbar';
     
         return (
             <main className="container">
-                 <ColdNavbar />
+                 <ColdStateNavbar />
 
-                 <h1>work?</h1>
+                 <h1>Home</h1>
        
     
             </main>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { IMedVideo } from '../utils/interfaces';
 import MeditationDisplay from '../components/MeditationDisplay';
 import apiService from '../utils/api-service';
-import Navbar from '../components/Navbar';
+import HotStateNavbar from '../components/HotStateNavbar';
 
  
     const Meditation: React.FC<MeditationProps> = (props) => {
@@ -27,7 +27,7 @@ import Navbar from '../components/Navbar';
     
         return (
             <main className="container">
-                 <Navbar />
+                 <HotStateNavbar />
 
                  <h1>work?</h1>
        
