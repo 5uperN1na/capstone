@@ -6,8 +6,20 @@ const Navbar: React.FC<NavbarProps> = () => {
 
     return (
 
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="/">LOGO FP</a>
+        // <nav className="navbar navbar-expand-lg navbar-light bg-light">
+
+        <nav className="fixed-top nav-margin bg-white navbar navbar-expand-lg navbar-light border border-top-0 border-left-0 border-right-0 shadow-sm pr-5  ">
+            <a className="navbar-brand" href="/">
+                <img
+                    className="ml-5 my-auto"
+                    alt='ss'
+                    src='/images/ss.png'
+                    style={{ width: "100px", height: "auto" }}
+                />
+            </a>
+
+
+            {/* <a className="navbar-brand" href="/">LOGO FP</a> */}
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -32,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                     <li className="nav-item">
                         <a className="nav-link" href="/blogs">Blog</a>
                     </li>
-{/* 
+                    {/* 
 {/* 
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,12 +75,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
 
                 </ul>
-                <form className="form-inline my-2 my-lg-0">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-
-
-                </form>
+    
             </div>
         </nav>
 
