@@ -4,6 +4,7 @@ import { IAffirmVideo } from '../utils/interfaces';
 import AffirmationDisplay from '../components/AffirmationDisplay';
 import apiService from '../utils/api-service';
 import Navbar from '../components/Navbar';
+import Background from '../components/Background';
 
  
     const Affirmation: React.FC<AffirmationProps> = (props) => {
