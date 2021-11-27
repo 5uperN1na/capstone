@@ -6,7 +6,6 @@ import apiService from '../utils/api-service';
 import Navbar from '../components/Navbar';
 import Background from '../components/Background';
 
- 
     const Affirmation: React.FC<AffirmationProps> = (props) => {
 
         const [affirm_videos, setAffirmVideos] = useState<IAffirmVideo[]>([]);

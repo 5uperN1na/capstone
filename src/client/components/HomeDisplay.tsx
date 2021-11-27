@@ -8,16 +8,16 @@ const HomeDisplay: React.FC<HomeDisplayProps> = () => {
     return (
 
         <Background>
-            <div className="jumbotron jumbotron-fluid py-5">
+            <div className="jumbotron jumbotron-fluid">
                 <div className="container py-5">
                     <h1 className="display-4 text-center">Today's Affirmations</h1>
                     <p className="lead text-center"><i>Showing up <u>is</u> good enough; it is still a choice.</i></p>
                     <p className="date text-center"><b>{moment().format("MMM Do YYYY")}</b></p>
+                   
                 </div>
+                <hr className="line shadow"></hr>
             </div>
 
-                <hr className="line shadow my-2"></hr>
-           
             <div className="container-fluid">
                 <div className="row justify-content-center">
 
@@ -61,33 +61,32 @@ const HomeDisplay: React.FC<HomeDisplayProps> = () => {
 const Background = styled.div`
 
 .jumbotron {
-    // padding: 30px;
-    // margin-top: 30px;
     font-size: 21px;
     font-weight: 200px;
-    line-height: 2.1428571435;
-    color: inherit;
+    color: white;
     background-color: transparent;
-    margin: none;
+    // margin: none;
+    padding-bottom: 0;
+    background-color: #93E9BE;
 }
 
 .line{
     position: relative;
-    top: 5px;
+    // top: 5px;
     border: 5px;
-    height: 2px;
+    height: 10px;
     background: grey;
-    // margin-bottom: 10px;
+   
 }
 
 .container-fluid {
-    background-color: #93E9BE;
-    background: linear-gradient(90deg, #93E9BE 50%, #fff 50%); 
+    // background-color: #93E9BE;
+    // background: linear-gradient(90deg, #93E9BE 50%, #fff 50%); 
     height: auto;
 }
 
 .card-deck {
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
  
 .card {

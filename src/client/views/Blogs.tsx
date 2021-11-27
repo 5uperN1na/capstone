@@ -1,48 +1,46 @@
-import * as React from 'react';
-import { useState, useEffect } from 'react';
-import { IBlog } from '../utils/interfaces';
-import apiService from '../utils/api-service';
-import Navbar from '../components/Navbar';
-import BlogsDisplay from '../components/BlogsDisplay';
+// import * as React from 'react';
+// import { useState, useEffect } from 'react';
+// import { IBlog } from '../utils/interfaces';
+// import apiService from '../utils/api-service';
+// import Navbar from '../components/Navbar';
+// // import BlogsDisplay from '../components/BlogsDisplay';
 
-    const Blogs: React.FC<BlogsProps> = (props) => {
+//     const Blogs: React.FC<BlogsProps> = (props) => {
 
-        const [blogs, setBlogs] = useState<IBlog[]>([]);
+//         const [blogs, setBlogs] = useState<IBlog[]>([]);
 
     
-        const getData = async () => {
+//         const getData = async () => {
     
-            const blogs = await apiService('/api/blogs');
-            setBlogs(blogs);
+//             const blogs = await apiService('/api/blogs');
+//             setBlogs(blogs);
       
-        };
+//         };
 
     
-        useEffect(() => {
-            getData();
-        }, []);
+//         useEffect(() => {
+//             getData();
+//         }, []);
 
     
-        return (
-            <main className="container">
-                 <Navbar />
-
-                 <h1>work?</h1>
+//         return (
+//             <main className="container">
+//                  <Navbar />
        
-                <div className="row">
+//                 <div className="row">
                 
                 
-                    {blogs.map(blog => (
-                        <BlogsDisplay key={`display-card-${blog.id}`} blog={blog} />
+//                     {/* {blogs.map(blog => (
+//                         <BlogsDisplay key={`display-card-${blog.id}`} blog={blog} /> */}
     
-                    ))}
+//                     ))}
                  
-                </div>
+//                 </div>
     
-            </main>
-        );
-    }
+//             </main>
+//         );
+//     }
     
-    interface BlogsProps { }
+//     interface BlogsProps { }
     
-    export default Blogs;
+//     export default Blogs;

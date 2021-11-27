@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './views/Home';
 import Affirmation from './views/Affirmation';
 import Meditation from './views/Meditation';
-import Blogs from './views/Blogs';
+// import Blogs from './views/Blogs';
 import Login from './views/Login';
 import Register from './views/Register';
 
@@ -34,9 +34,9 @@ const App: React.FC<AppProps> = (props) => {
 					<Meditation />
 				</Route>
 
-				<Route exact path='/blogs'>
+				{/* <Route exact path='/blogs'>
 					<Blogs />
-				</Route>
+				</Route> */}
 
 
 			</Switch>

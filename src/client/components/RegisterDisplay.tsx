@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
- import Navbar from '../components/Navbar';
 import apiService from '../utils/api-service';
 import { IRegister } from '../utils/interfaces';
 

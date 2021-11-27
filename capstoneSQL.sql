@@ -91,6 +91,8 @@ primary key(id),
 foreign key (affirm_categoryid) references affirm_categories(id)
 );
 
+select * from  affirm_videos;
+
  select * from affirm_videos where id = 3;
 
  CREATE TABLE `blog_categories` (
@@ -98,6 +100,8 @@ foreign key (affirm_categoryid) references affirm_categories(id)
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 );
+
+select * from blog_categories;
 
 create table blogs (
 id int(11) auto_increment,
