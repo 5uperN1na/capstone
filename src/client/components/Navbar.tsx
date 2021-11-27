@@ -24,9 +24,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                     subsets={['cyrillic-ext', 'greek']}
                 />
 
-                {/* // <nav className="navbar navbar-expand-lg navbar-light bg-light"> */}
-
-                <nav className="fixed-top nav-margin bg-white navbar navbar-expand-lg navbar-light border border-top-0 border-left-0 border-right-0 shadow-sm pr-5  ">
+                {/* <nav className="fixed-top nav-margin bg-white navbar navbar-expand-lg navbar-light border border-top-0 border-left-0 border-right-0 shadow-sm pr-5  ">
                     <a className="navbar-brand" href="/"> Subtle Stillness</a>
 
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,28 +33,68 @@ const Navbar: React.FC<NavbarProps> = () => {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto">
-                            <li className="dropdown">
+                            <ul className="nav nav-pills">
+                                <li className="nav-item">
+                                    <a className="nav-link active" href="/login">Sign Up</a>
+                                </li>
+                            </ul>
 
-                                <ul className="nav nav-pills">
-                                    <li className="nav-item">
-                                        <a className="nav-link active" href="/login">Sign Up</a>
-                                    </li>
-                                </ul>
-
+                            <li className="nav-item">
+                                <a className="nav-link text-custom-nav" href="/about">About</a>
                             </li>
-
                         </ul>
+                    </div> 
 
+                </nav> */}
+
+
+
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <a className="navbar-brand" href="#">Subtle Stillness</a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarText">
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item active">
+                                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Features</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Pricing</a>
+                            </li>
+                        </ul>
+                        <span className="navbar-text">
+                          
+                          Subtle Stillness
+                        </span>
                     </div>
                 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </Background>
         </div>
 
-
-
     );
-
-
 
 }
 
@@ -74,8 +112,12 @@ const Background = styled.div`
   
     .nav-link.active,
     .show > .nav-link {
-      color: white;
-      background-color: #93E9BE;
+      color: grey;
+    //   outline-color: #93E9BE;
+      background-color: white;
+      border: 2px;
+      outline-style: solid;
+      outline-color: #93E9BE; 
     }
   }
 
