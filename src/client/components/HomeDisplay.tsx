@@ -1,9 +1,11 @@
 import * as React from 'react';
 import moment from 'moment';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HomeDisplay: React.FC<HomeDisplayProps> = () => {
+
+    const history = useHistory();
 
     return (
 
@@ -13,7 +15,7 @@ const HomeDisplay: React.FC<HomeDisplayProps> = () => {
                     <h1 className="display-4 text-center">Today's Affirmations</h1>
                     <p className="lead text-center"><i>Showing up <u>is</u> good enough; it is still a choice.</i></p>
                     <p className="date text-center"><b>{moment().format("MMM Do YYYY")}</b></p>
-                   
+
                 </div>
                 <hr className="line shadow"></hr>
             </div>
@@ -22,28 +24,24 @@ const HomeDisplay: React.FC<HomeDisplayProps> = () => {
                 <div className="row justify-content-center">
 
                     <div className="card-deck">
-                        <div className="card shadow"  >
-                            <img className="card-img" src="/images/bg.png" style={{ "height": "100%", "width": "100%" }} />
+                        <div className="card shadow" onClick={() => history.push(`/affirmation`)}>
+                            <img className="card-img" src="/images/pink_bg.png" style={{ "height": "100%", "width": "100%" }} />
                             <div className="card-img-overlay">
-                                <h5 className="card-title"><a className="nav-link" href="/affirmation">Affirmations</a></h5>
+                                <h5 className="card-title">Affirmations</h5>
                             </div>
                         </div>
 
-
-                        <div className="card shadow"  >
-                            <img className="card-img" src="/images/bg.png" style={{ "height": "100%", "width": "100%" }} />
+                        <div className="card shadow" onClick={() => history.push(`/meditation`)}>
+                            <img className="card-img" src="/images/purple_bg.png" style={{ "height": "100%", "width": "100%" }} />
                             <div className="card-img-overlay">
-                                <h5 className="card-title"><a className="nav-link" href="/meditation">Medititaions</a></h5>
-
+                                <h5 className="card-title">Meditation</h5>
                             </div>
                         </div>
 
-
-                        <div className="card shadow"  >
-                            <img className="card-img" src="/images/bg.png" style={{ "height": "100%", "width": "100%" }} />
+                        <div className="card shadow" onClick={() => history.push(`/meditation`)}>
+                            <img className="card-img" src="/images/blue_bg.png" style={{ "height": "100%", "width": "100%" }} />
                             <div className="card-img-overlay">
-                                <h5 className="card-title"><a className="nav-link" href="/meditation">Blog</a></h5>
-
+                                <h5 className="card-title">Blog</h5>
                             </div>
                         </div>
 
@@ -51,7 +49,6 @@ const HomeDisplay: React.FC<HomeDisplayProps> = () => {
 
                 </div>
             </div>
-
         </Background >
     );
 
@@ -64,10 +61,11 @@ const Background = styled.div`
     font-size: 21px;
     font-weight: 200px;
     color: white;
-    background-color: transparent;
+    // background-color: transparent;
     // margin: none;
     padding-bottom: 0;
-    background-color: #93E9BE;
+    // background-color: #93E9BE;
+    background-color: rgba(46, 139, 87, 0.3);
 }
 
 .line{
@@ -93,9 +91,12 @@ const Background = styled.div`
     
     width: 16rem;
     height: 15rem;
+}
 
-  
-
+.card-title {
+    
+    text-align: center;
+    padding-top: 90px;
 }
 
 
