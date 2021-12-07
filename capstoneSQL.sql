@@ -66,7 +66,7 @@ SELECT med_videos.*, med_categories.name from med_videos JOIN med_categories on 
 
 INSERT into med_videos (med_categoryid, title, author, video_url) VALUES (1, "Calm Sleep Down Meditation", "Jason Stephenson", "https://www.youtube.com/watch?v=88mXwNnPgXM");
 
-UPDATE affirm_videos SET video_url = "8mSJ4uKRBf0" where id = 3;
+UPDATE med_videos SET video_url = "DvR8rTffCP4" where id = 3;
 
 CREATE TABLE `affirm_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -74,11 +74,16 @@ CREATE TABLE `affirm_categories` (
   PRIMARY KEY (`id`)
 );
 
-select * from affirm_categories;
+INSERT into affirm_videos (affirm_categoryid, title, author, video_url) VALUES (1, "Calm Sleep Down Meditation", "Jason Stephenson", "https://www.youtube.com/watch?v=88mXwNnPgXM");
 
 insert into affirm_categories (id, name) values
+(4, "Morning Affirmations");
 
-(4, "Happiness");
+
+select * from affirm_categories;
+
+select * from affirm_videos;
+
 
 create table affirm_videos (
 id int(11) auto_increment,
@@ -91,36 +96,27 @@ primary key(id),
 foreign key (affirm_categoryid) references affirm_categories(id)
 );
 
-select * from  affirm_videos;
+select * from blogs;
 
- select * from affirm_videos where id = 3;
-
- CREATE TABLE `blog_categories` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
-select * from blog_categories;
-
-create table blogs (
+create table quotes (
 id int(11) auto_increment,
 blog_categoryid int(11) not null,
 `title` varchar(100) NOT NULL,
 `author` varchar(100) NOT NULL,
-`content` TEXT,
 created_at timestamp default current_timestamp,
 primary key(id),
 foreign key (blog_categoryid) references blog_categories(id)
 );
 
-select * from blogs;
+select * from quotes;
 
-select * from blog_categories;
 
-insert into blog_categories (id, name) values
 
-(2, "Getting started");
 
-INSERT into blogs (blog_categoryid, title, author, content) VALUES (2, "Baby Steps", "Paula Suarez", "There is not a right or a wrong way to meditate.  Meditation can be done anytime and anywhere.");
 
+INSERT into affirm_videos (affirm_categoryid, title, author, video_url) VALUES (4, "42 Inspiring Morning Affirmations", "Fresh Affirmations", "https://youtu.be/OVUXGDf6YSE");
+
+INSERT into affirm_videos (affirm_categoryid, title, author, video_url) VALUES (4, "42 Inspiring Morning Affirmations", "Fresh Affirmations", "https://youtu.be/OVUXGDf6YSE");
+ 
+ 
+UPDATE affirm_videos SET video_url = "OVUXGDf6YSE" where id = 5;

@@ -12,10 +12,9 @@ const MeditationDisplay: React.FC<MeditationDisplayProps> = ({ med_video }) => {
 
     return (
 
-      
-        <div className="col-md-4 mb-sm-2">
 
-            <div className="card mt-5">
+        <div className="col-md-4 mb-sm-2">
+            <div className="card" style={{ width: '75%', height: '75%' }}>
 
                 <div className="embed-responsive embed-responsive-16by9" >
 
@@ -28,15 +27,15 @@ const MeditationDisplay: React.FC<MeditationDisplayProps> = ({ med_video }) => {
                             height: "100%"
                         }}
                         src={`https://www.youtube.com/embed/${med_video.video_url}`}
-                        frameBorder="3"
+                        frameBorder="1"
                     />
                 </div>
 
                 <div className="card-header bg-info text-white">    {med_video.title}</div>
                 <div className="card-body bg-success text-white">{med_video.author}  <span className="float-right badge badge-pill badge-warning">{med_video.name}</span>
                 </div>
-              
-                
+
+
 
 
             </div >

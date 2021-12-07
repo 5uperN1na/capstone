@@ -2,15 +2,30 @@ import * as React from 'react';
 import moment from 'moment';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import { IHome } from '../utils/interfaces';
 
-const HomeDisplay: React.FC<HomeDisplayProps> = () => {
+const HomeDisplay: React.FC<HomeDisplayProps> = ({ home }) => {
 
     const history = useHistory();
 
     return (
 
         <Background>
-            <div className="jumbotron jumbotron-fluid">
+
+            <div className="col-md-4 mb-sm-2">
+                <div className="card">
+                    <div className="card-header"> {home.title}</div>
+
+                </div >
+
+            </div >
+
+
+
+
+
+
+            {/* <div className="jumbotron jumbotron-fluid">
                 <div className="container py-5">
                     <h1 className="display-4 text-center">Today's Affirmations</h1>
                     <p className="lead text-center"><i>Showing up <u>is</u> good enough; it is still a choice.</i></p>
@@ -48,7 +63,7 @@ const HomeDisplay: React.FC<HomeDisplayProps> = () => {
                     </div>
 
                 </div>
-            </div>
+            </div> */}
         </Background >
     );
 
@@ -108,6 +123,7 @@ const Background = styled.div`
 
 
 interface HomeDisplayProps {
+    home: IHome
 
 }
 

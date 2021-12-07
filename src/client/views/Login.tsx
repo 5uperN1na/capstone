@@ -4,7 +4,7 @@ import { useLocation, useHistory, Link } from 'react-router-dom';
 import LoginDisplay from '../components/LoginDisplay';
 import ColdStateNavbar from '../components/ColdStateNavbar';
 import apiService from '../utils/api-service';
-import Navbar from '../components/Navbar';
+import Navbar2 from '../components/Navbar2';
 import Background from '../components/Background';
 
 
@@ -32,7 +32,7 @@ const Login: React.FC<LoginProps> = (props) => {
         <main>
 
 
-            <Navbar />
+            <Navbar2 />
             <Background />
 
             <section className="row justify-content-center mt-3">

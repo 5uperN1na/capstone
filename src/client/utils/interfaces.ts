@@ -32,20 +32,14 @@ export interface IAffirmVideo {
 
 }
 
-
 export interface IHome {
     id?: number;
-    categoryid?: number;
+    blog_categoryid?: number;
     title?: string;
     author?: string;
-    video_url?: string;
     _created: Date;
-    name?: string;
 
 }
-
-
-
 
 
 export interface ILogin {

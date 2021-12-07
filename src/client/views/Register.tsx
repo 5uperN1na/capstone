@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import ColdStateNavbar from '../components/ColdStateNavbar';
+import Navbar2 from '../components/Navbar2';
 import apiService from '../utils/api-service';
  
 
@@ -29,7 +29,7 @@ const Register: React.FC<RegisterProps> = (props) => {
 
     return (
         <main>
-            <ColdStateNavbar />
+            <Navbar2 />
 
          
 

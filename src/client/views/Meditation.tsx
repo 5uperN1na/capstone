@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { IMedVideo } from '../utils/interfaces';
 import MeditationDisplay from '../components/MeditationDisplay';
 import apiService from '../utils/api-service';
-import Navbar from '../components/Navbar';
+import Navbar2 from '../components/Navbar2';
 
  
     const Meditation: React.FC<MeditationProps> = (props) => {
@@ -26,13 +26,9 @@ import Navbar from '../components/Navbar';
 
     
         return (
-            <main className="container">
-                 <Navbar />
-
-                 <h1>work?</h1>
-       
+            <main className="container my-5">
+                 <Navbar2 />
                 <div className="row">
-                
                 
                     {med_videos.map(med_video => (
                         <MeditationDisplay key={`display-card-${med_video.id}`} med_video={med_video} />
