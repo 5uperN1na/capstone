@@ -2,9 +2,10 @@ import * as React from 'react';
 import moment from 'moment';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
-import { IHome } from '../utils/interfaces';
+import { IQuote } from '../utils/interfaces';
 
-const HomeDisplay: React.FC<HomeDisplayProps> = ({ home }) => {
+
+const HomeDisplay: React.FC<HomeDisplayProps> = ({ quote }) => {
 
     const history = useHistory();
 
@@ -12,23 +13,10 @@ const HomeDisplay: React.FC<HomeDisplayProps> = ({ home }) => {
 
         <Background>
 
-            <div className="col-md-4 mb-sm-2">
-                <div className="card">
-                    <div className="card-header"> {home.title}</div>
-
-                </div >
-
-            </div >
-
-
-
-
-
-
-            {/* <div className="jumbotron jumbotron-fluid">
+            <div className="jumbotron jumbotron-fluid">
                 <div className="container py-5">
                     <h1 className="display-4 text-center">Today's Affirmations</h1>
-                    <p className="lead text-center"><i>Showing up <u>is</u> good enough; it is still a choice.</i></p>
+                    <p className="lead text-center"><i>{quote.title}</i></p>
                     <p className="date text-center"><b>{moment().format("MMM Do YYYY")}</b></p>
 
                 </div>
@@ -63,12 +51,13 @@ const HomeDisplay: React.FC<HomeDisplayProps> = ({ home }) => {
                     </div>
 
                 </div>
-            </div> */}
+            </div>
+
+
         </Background >
     );
 
 }
-
 
 const Background = styled.div`
 
@@ -115,15 +104,12 @@ const Background = styled.div`
 }
 
 
-
-
-
 `;
 
 
-
 interface HomeDisplayProps {
-    home: IHome
+    quote: IQuote
+
 
 }
 

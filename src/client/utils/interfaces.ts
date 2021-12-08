@@ -32,12 +32,13 @@ export interface IAffirmVideo {
 
 }
 
-export interface IHome {
+export interface IQuote {
     id?: number;
     blog_categoryid?: number;
     title?: string;
     author?: string;
     _created: Date;
+    name?: string;
 
 }
 
@@ -69,4 +70,10 @@ export interface IBlog {
     content?: string;
     _created: Date;
 
+}
+
+export interface IBlogCategory {
+    id?: number;
+    name?: string;
+    _created?: Date;
 }

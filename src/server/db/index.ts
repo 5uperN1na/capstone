@@ -7,6 +7,7 @@ import affirm_videos from './queries/affirm_videos';
 import affirm_categories from './queries/affirm_categories';
 import blog_categories from './queries/blog_categories';
 import blogs from './queries/blogs';
+import quotes from './queries/quotes';
 
 //sql connection
 
@@ -35,5 +36,6 @@ export default {
     affirm_videos,
     affirm_categories,
     blogs,
-    blog_categories
+    blog_categories,
+    quotes
 }

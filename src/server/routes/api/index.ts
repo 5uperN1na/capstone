@@ -6,6 +6,7 @@ import affirm_videosRouter from './affirm_videos';
 import affirm_categoriesRouter from './affirm_categories';
 import blog_categoriesRouter from './blog_categories';
 import blogsRouter from './blogs';
+import quotesRouter from './quotes';
 
 const router = Router();
 
@@ -17,6 +18,7 @@ router.use('/affirm_videos', affirm_videosRouter);
 router.use('/affirm_categories', affirm_categoriesRouter);
 router.use('/blog_categories', blog_categoriesRouter);
 router.use('/blogs', blogsRouter);
+router.use('/quotes', quotesRouter);
 
 
 export default router;
