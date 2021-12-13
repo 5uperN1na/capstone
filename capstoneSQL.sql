@@ -108,15 +108,27 @@ primary key(id),
 foreign key (blog_categoryid) references blog_categories(id)
 );
 
+SELECT * from quotes JOIN blog_categories on blog_categories.id;
+
+SELECT * from quotes JOIN blog_categories on blog_categories.id WHERE quotes.id = 1;
+
 select * from quotes;
 
+select * from med_videos;
 
+select * from med_categories;
 
+select * from blogs;
 
+select * from blog_categories;
+
+insert into blog_categories (id, name) values (6, "Acceptance"); 
+
+insert into quotes (blog_categoryid, title, author) values (3, "Look for the life's golden nuggets! They belong to you.", "Paula Suarez"); 
 
 INSERT into affirm_videos (affirm_categoryid, title, author, video_url) VALUES (4, "42 Inspiring Morning Affirmations", "Fresh Affirmations", "https://youtu.be/OVUXGDf6YSE");
 
-INSERT into affirm_videos (affirm_categoryid, title, author, video_url) VALUES (4, "42 Inspiring Morning Affirmations", "Fresh Affirmations", "https://youtu.be/OVUXGDf6YSE");
+INSERT into quotes (affirm_categoryid, title, author, video_url) VALUES (4, "42 Inspiring Morning Affirmations", "Fresh Affirmations", "https://youtu.be/OVUXGDf6YSE");
  
  
 UPDATE affirm_videos SET video_url = "OVUXGDf6YSE" where id = 5;

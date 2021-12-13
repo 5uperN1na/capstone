@@ -8,37 +8,69 @@ import { IQuote } from '../utils/interfaces';
 
 const Home: React.FC<HomeProps> = (props) => {
 
-    // const [med_videos, setMedVideos] = useState<IMedVideo[]>([]);
     const [quotes, setQuotes] = useState<IQuote[]>([]);
+    // const [results, setResults] = useState<IQuote[]>([]);
+    // const [randomQuotes, setRandomQuotes] = useState<IQuote[]>([]);
 
     const getData = async () => {
 
-        const quotes = await apiService('/api/quotes');
+        const results = await apiService('/api/quotes');
+        // let dataQuotes = quotes;
+        // let randomNum = Math.floor(Math.random() * dataQuotes.length);
+        // let x = dataQuotes[randomNum];
+        // setQuotes(quotes);
+        // setRandomQuotes(x);
+
+        let quotes = results.filter((result: { id: number; }) => result.id === 2).map((result: { title: any; }) => result.title);
         console.log(quotes);
-        // const med_videos = await apiService('/api/med_videos');
-        // console.log(med_videos);
-        // setMedVideos(med_videos);
         setQuotes(quotes);
+
+        // let result = quotes.filter((quote: { id: number; }) => quote.id === 1).map((quote: { title: any; }) => quote.title);
+        // console.log(result);
+
     };
+
+
 
 
     useEffect(() => {
         getData();
+
     }, []);
 
 
+
+
     return (
-
         <main className="container my-5">
-             <Navbar />
-            <div className="row">
-            
-                {quotes.map(quote => (
-                    <HomeDisplay key={`display-card-${quote.id}`} quote={quote} />
+            <Navbar />
 
-                ))}
-             
+            <div className="row">
+                {/*        
+           {randomQuotes.map(randomQuote => (
+               <HomeDisplay key={`display-card-${randomQuote.id}`} quote={randomQuote} />
+
+           ))} */}
+
+     
+          
+
+                <h1>{quotes}</h1>
+
+
+
+
             </div>
+
+
+            {/* <div className="row">
+       
+           {quotes.map(quote => (
+               <HomeDisplay key={`display-card-${quote.id}`} quote={quote} />
+
+           ))}
+        
+       </div> */}
 
         </main>
     );

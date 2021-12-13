@@ -9,6 +9,7 @@ const HomeDisplay: React.FC<HomeDisplayProps> = ({ quote }) => {
 
     const history = useHistory();
 
+
     return (
 
         <Background>
